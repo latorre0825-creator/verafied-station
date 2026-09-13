@@ -1,5 +1,9 @@
 #EXTM3U
 #EXTENC:UTF-8
 #PLAYLIST:VeRaFIED Music
-#EXTINF:-1,VeRaFIED Music
-https://verafied-station.vercel.app/
+#EXTINF:16,VeRaFIED Music - After Hours
+https://cdn.jsdelivr.net/gh/latorre0825-creator/verafied-station@main/audio/after-hours.mp3
+#EXTINF:16,VeRaFIED Music - Lobby Light
+https://cdn.jsdelivr.net/gh/latorre0825-creator/verafied-station@main/audio/lobby-light.mp3
+#EXTINF:16,VeRaFIED Music - Signal Lost
+https://cdn.jsdelivr.net/gh/latorre0825-creator/verafied-station@main/audio/signal-lost.mp3

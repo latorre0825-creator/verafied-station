@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://verafied.netlify.app/sitemap.xml
+Sitemap: https://latorre0825-creator.github.io/sitemap.xml
