@@ -25,10 +25,9 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="VeRaFIED — worldwide music station" />
 <link rel="canonical" href="https://verafied.netlify.app/" />
-<link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/favicon.png" />
-<link rel="alternate" type="audio/mpeg" title="VeRaFIED live stream" href="https://verafied.netlify.app/api/radio" />
-<link rel="alternate" type="audio/x-mpegurl" title="VeRaFIED playlist" href="https://verafied.netlify.app/listen.m3u" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="favicon.png" />
+<link rel="alternate" type="audio/x-mpegurl" title="VeRaFIED playlist" href="listen.m3u" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"RadioStation","name":"VeRaFIED Music","alternateName":"VeRaFIED","url":"https://verafied.netlify.app/","logo":"https://verafied.netlify.app/favicon.png","image":"https://verafied.netlify.app/favicon.png","description":"24/7 worldwide independent music station from Cape Coral, Florida. Blues, rock, Americana, alternative and unsigned originals. Listen free. Bands go live for $5 or $2.","genre":["Independent","Blues","Rock","Americana","Alternative","Tropical","Electronic"],"email":"tiffaneylatorre@gmail.com","sameAs":["https://verafied.netlify.app/listen.m3u"],"address":{"@type":"PostalAddress","addressLocality":"Cape Coral","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":26.5629,"longitude":-81.9495},"areaServed":"Worldwide","broadcastDisplayName":"VeRaFIED Music","founder":[{"@type":"Person","name":"Luis La Torre"},{"@type":"Person","name":"Tiffaney Latorre"}]}
 </script>
@@ -151,13 +150,13 @@ input[type=file]{display:none}
     <a id="sharex" target="_blank" rel="noopener noreferrer">Share on X</a>
     <a id="sharewa" target="_blank" rel="noopener noreferrer">Share on WhatsApp</a>
     <a id="sharesms" href="#">Text a friend</a>
-    <a href="/listen.m3u">Open in a radio app (Icecast 128k)</a>
+    <a href="listen.m3u">Open in a radio app</a>
     <a href="/autodj.m3u">AutoDJ playlist for Icecast hosts</a>
     <a href="https://www.radio-browser.info/history/bc188c5a-1147-4416-b3f4-7f07e89b1773" target="_blank" rel="noopener">Find us on Radio Browser</a>
     <a href="https://radio.garden" target="_blank" rel="noopener">Radio Garden globe</a>
     <a href="https://tunein.com" target="_blank" rel="noopener">TuneIn</a>
   </div>
-  <p class="note">Cape Coral, Florida · 24/7 independent music · Contact: tiffaneylatorre@gmail.com · Stream: https://verafied.netlify.app/api/radio</p>
+  <p class="note">Cape Coral, Florida · 24/7 independent music · Contact: tiffaneylatorre@gmail.com</p>
   <h3>OTHER STATIONS</h3>
   <ul class="stations">
     <li><a href="https://radio.garden" target="_blank" rel="noopener">Radio Garden <small>spin the planet</small></a></li>
@@ -182,9 +181,9 @@ input[type=file]{display:none}
 <script>
 const EPOCH = Date.UTC(2026, 0, 1);
 const HOUSE = [
-  { id: "after-hours", title: "After Hours", artist: "VeRaFIED Music", src: "/audio/after-hours.wav", durationMs: 16000, genre: "Lounge", about: "Late-night lounge bed for the station — warm keys, slow pulse.", mine: false },
-  { id: "lobby-light", title: "Lobby Light", artist: "VeRaFIED Music", src: "/audio/lobby-light.wav", durationMs: 16000, genre: "Ambient", about: "Soft ambient wash between independent cuts.", mine: false },
-  { id: "signal-lost", title: "Signal Lost", artist: "VeRaFIED Music", src: "/audio/signal-lost.wav", durationMs: 16000, genre: "Electronic", about: "Short electronic sting that keeps the worldwide clock moving.", mine: false },
+  { id: "after-hours", title: "After Hours", artist: "VeRaFIED Music", src: "audio/after-hours.mp3", durationMs: 16000, genre: "Lounge", about: "Late-night lounge bed for the station — warm keys, slow pulse.", mine: false },
+  { id: "lobby-light", title: "Lobby Light", artist: "VeRaFIED Music", src: "audio/lobby-light.mp3", durationMs: 16000, genre: "Ambient", about: "Soft ambient wash between independent cuts.", mine: false },
+  { id: "signal-lost", title: "Signal Lost", artist: "VeRaFIED Music", src: "audio/signal-lost.mp3", durationMs: 16000, genre: "Electronic", about: "Short electronic sting that keeps the worldwide clock moving.", mine: false },
 ];
 let tracks = HOUSE.slice();
 const audio = document.getElementById("audio");
