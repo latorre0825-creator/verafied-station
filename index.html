@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=14b8bf00-5d17-4572-aa44-db121cab6cf8
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=14b8bf00-5d17-4572-aa44-db121cab6cf8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>VeRaFIED — worldwide music station · Cape Coral</title>
+<meta name="description" content="VeRaFIED Music — 24/7 worldwide independent station from Cape Coral, Florida. Listen free. Independent bands go live for $5 or $2. PayPal: Tiffaney Latorre." />
+<meta name="theme-color" content="#0a0a0a" />
+<meta name="geo.region" content="US-FL" />
+<meta name="geo.placename" content="Cape Coral, Florida" />
+<meta name="geo.position" content="26.5629;-81.9495" />
+<meta name="ICBM" content="26.5629, -81.9495" />
+<meta name="keywords" content="VeRaFIED, independent radio, blues radio, rock radio, americana, alternative, Cape Coral radio, internet radio Florida" />
+<meta property="og:title" content="VeRaFIED — worldwide music station" />
+<meta property="og:description" content="Join live. Same song, same second, worldwide. Listen free. Bands launch for $5 or $2." />
+<meta property="og:url" content="https://verafied.netlify.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://verafied.netlify.app/favicon.png" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="VeRaFIED — worldwide music station" />
+<link rel="canonical" href="https://verafied.netlify.app/" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="alternate" type="audio/mpeg" title="VeRaFIED live stream" href="https://verafied.netlify.app/api/radio" />
+<link rel="alternate" type="audio/x-mpegurl" title="VeRaFIED playlist" href="https://verafied.netlify.app/listen.m3u" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RadioStation","name":"VeRaFIED Music","alternateName":"VeRaFIED","url":"https://verafied.netlify.app/","logo":"https://verafied.netlify.app/favicon.png","image":"https://verafied.netlify.app/favicon.png","description":"24/7 worldwide independent music station from Cape Coral, Florida. Blues, rock, Americana, alternative and unsigned originals. Listen free. Bands go live for $5 or $2.","genre":["Independent","Blues","Rock","Americana","Alternative","Tropical","Electronic"],"email":"tiffaneylatorre@gmail.com","sameAs":["https://verafied.netlify.app/listen.m3u"],"address":{"@type":"PostalAddress","addressLocality":"Cape Coral","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":26.5629,"longitude":-81.9495},"areaServed":"Worldwide","broadcastDisplayName":"VeRaFIED Music","founder":[{"@type":"Person","name":"Luis La Torre"},{"@type":"Person","name":"Tiffaney Latorre"}]}
+</script>
+<style>
+:root{--bg:#0a0a0a;--fg:#fff4ee;--muted:#c4a090;--red:#e11d2e;--orange:#ff6b1a;--card:#140c0c}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
+body{min-height:100dvh;display:flex;flex-direction:column}
+header{padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1c1010}
+.mark{font-weight:800;letter-spacing:-.04em;font-size:1.25rem}
+.mark span{color:var(--orange)}
+.onair{color:var(--muted);font-size:.75rem;letter-spacing:.08em}
+main{flex:1;padding:1.25rem 1.25rem 8rem;max-width:32rem;margin:0 auto;width:100%}
+.nowbox{background:var(--card);border-radius:1.1rem;padding:1.25rem;margin-bottom:1.25rem}
+.nowbox h2{margin:.15rem 0 0;font-size:1.35rem;letter-spacing:-.03em}
+.nowbox p.sub{margin:.2rem 0 .35rem;color:var(--muted)}
+.chip{display:inline-block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);border:1px solid #3a2020;border-radius:999px;padding:.2rem .55rem;margin:.15rem 0 .45rem}
+.about{color:var(--muted);font-size:.85rem;margin:0 0 1rem;line-height:1.4}
+select,textarea{width:100%;appearance:none;border:1px solid #3a2020;background:#0e0909;color:var(--fg);border-radius:.7rem;padding:.7rem .85rem;font-size:1rem;font-family:inherit}
+textarea{min-height:4.2rem;resize:vertical}
+.meta{display:grid;gap:.5rem;margin:.6rem 0 .2rem}
+.row{display:flex;gap:.6rem;flex-wrap:wrap}
+.live,.add{appearance:none;border:0;border-radius:999px;padding:.95rem 1.1rem;font-weight:700;font-size:1rem;cursor:pointer;flex:1;min-width:8rem}
+.live{background:var(--red);color:#fff4ee}
+.pay{background:#1c1010;color:var(--fg);box-shadow:inset 0 0 0 1px #3a2020;text-decoration:none;display:flex;align-items:center;justify-content:center}
+.pay5{background:#1a3a28;box-shadow:inset 0 0 0 1px #2d5a40}
+.prices{display:grid;gap:.5rem;margin:.9rem 0 .4rem}
+input[type=text]{width:100%;appearance:none;border:1px solid #3a2020;background:#0e0909;color:var(--fg);border-radius:.7rem;padding:.7rem .85rem;font-size:1rem}
+.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.list button{width:100%;text-align:left;background:#120c0c;border:1px solid #2a1515;color:var(--fg);border-radius:.85rem;padding:.85rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:.75rem}
+.list button.on{border-color:var(--red);background:#1a0a0c}
+.list small{color:var(--muted)}
+h3{font-size:.8rem;letter-spacing:.12em;color:var(--muted);font-weight:600;margin:0 0 .6rem}
+footer.player{position:fixed;left:0;right:0;bottom:0;padding:1rem 1.25rem calc(1rem + env(safe-area-inset-bottom));background:#140c0c;border-top:1px solid #2a1515;display:flex;align-items:center;gap:1rem}
+.now{flex:1;min-width:0}
+.now strong,.now small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.now small{color:var(--muted)}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);flex:0 0 auto}
+.pause{appearance:none;border:0;background:#1c1010;color:var(--fg);border-radius:999px;padding:.55rem .9rem;font-weight:700;cursor:pointer}
+.err{color:#ff8a8a;font-size:.85rem;min-height:1.1em;margin:.6rem 0 0}
+.note{color:var(--muted);font-size:.8rem;margin:.75rem 0 0}
+.share{display:grid;gap:.5rem;margin:0 0 1.5rem}
+.share a,.share button{appearance:none;border:0;border-radius:.85rem;padding:.85rem 1rem;font-weight:700;font-size:.95rem;text-decoration:none;color:var(--fg);background:#120c0c;box-shadow:inset 0 0 0 1px #2a1515;text-align:center;cursor:pointer}
+.stations{list-style:none;margin:0 0 1.5rem;padding:0;display:flex;flex-direction:column;gap:.4rem}
+.stations a{display:flex;justify-content:space-between;align-items:center;color:var(--fg);text-decoration:none;background:#120c0c;border:1px solid #2a1515;border-radius:.85rem;padding:.8rem 1rem;font-weight:600}
+.stations small{color:var(--muted);font-weight:500}
+input[type=file]{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">VeRa<span>FIED</span></div>
+  <div class="onair">ON AIR</div>
+</header>
+<main>
+  <div class="nowbox">
+    <div class="onair">NOW PLAYING</div>
+    <h2 id="title">After Hours</h2>
+    <p class="sub" id="artist">VeRaFIED Music</p>
+    <div class="chip" id="genrechip">Lounge</div>
+    <p class="about" id="about">Late-night lounge bed for the station — warm keys, slow pulse.</p>
+    <div class="row">
+      <button class="live" id="join" type="button">Join live</button>
+      <button class="add" id="add" type="button">Add my song</button>
+    </div>
+    <div class="meta" id="songmeta">
+      <input id="band" type="text" placeholder="Artist / band name" maxlength="80" autocomplete="organization" />
+      <input id="songtitle" type="text" placeholder="Song title" maxlength="80" />
+      <select id="genrepick">
+        <option>Independent</option>
+        <option>Rock</option>
+        <option>Blues</option>
+        <option>Alternative</option>
+        <option>Hip-Hop</option>
+        <option>Country</option>
+        <option>Pop</option>
+        <option>Folk</option>
+        <option>Electronic</option>
+        <option>R&B</option>
+        <option>Latin</option>
+        <option>Reggae</option>
+        <option>Metal</option>
+        <option>Jazz</option>
+        <option>Indie</option>
+        <option>Americana</option>
+        <option>Tropical</option>
+        <option>Other</option>
+      </select>
+      <textarea id="songabout" maxlength="180" placeholder="Short description — what this song is"></textarea>
+    </div>
+    <div class="prices">
+      <a class="live pay5" id="pay5" href="#">PayPal $5 · Tiffaney Latorre</a>
+      <a class="add pay" id="pay2" href="#">PayPal $2 · Tiffaney Latorre</a>
+      <button class="add pay" id="zelle5" type="button">Zelle $5 · latorre0825@gmail.com</button>
+      <button class="add pay" id="zelle2" type="button">Zelle $2 · same email</button>
+      <a class="add pay" id="venmo5" href="#" hidden>Venmo $5</a>
+      <a class="add pay" id="cash5" href="#" hidden>Cash App $5</a>
+    </div>
+    <p class="note" id="payto">PayPal goes to Tiffaney Latorre, owner of VeRaFIED Music · tiffaneylatorre@gmail.com. Zelle still to Luis · latorre0825@gmail.com</p>
+    <div class="prices" id="deskbox">
+      <input id="pin" type="text" placeholder="Family key (Luis & Tiffaney only)" maxlength="40" autocomplete="off" />
+      <button class="add" id="desk" type="button">Open station desk</button>
+    </div>
+    <div class="prices" id="methodbox" hidden>
+      <input id="venmo" type="text" placeholder="Venmo username" maxlength="32" autocomplete="off" />
+      <input id="cashapp" type="text" placeholder="Cash App $cashtag" maxlength="20" autocomplete="off" />
+      <button class="add" id="savemethods" type="button">Save Venmo & Cash App</button>
+    </div>
+    <input id="file" type="file" accept="audio/*,.mp3,.m4a,.wav,.aac,.caf" />
+    <p class="err" id="err"></p>
+    <p class="note">Anyone can listen free. Bands pay $5 or $2 to go live worldwide. Luis and Tiffaney open the station desk with the family key — no fee.</p>
+  </div>
+  <h3>CATALOG</h3>
+  <ul class="list" id="catalog"></ul>
+  <h3>MUSIC TYPES ON AIR</h3>
+  <p class="note" id="genreslist">Independent · Blues · Rock · Americana · Alternative</p>
+  <h3>TELL THE WORLD</h3>
+  <div class="share">
+    <button type="button" id="copy">Copy station link</button>
+    <a id="sharex" target="_blank" rel="noopener noreferrer">Share on X</a>
+    <a id="sharewa" target="_blank" rel="noopener noreferrer">Share on WhatsApp</a>
+    <a id="sharesms" href="#">Text a friend</a>
+    <a href="/listen.m3u">Open in a radio app (Icecast 128k)</a>
+    <a href="/autodj.m3u">AutoDJ playlist for Icecast hosts</a>
+    <a href="https://www.radio-browser.info/history/bc188c5a-1147-4416-b3f4-7f07e89b1773" target="_blank" rel="noopener">Find us on Radio Browser</a>
+    <a href="https://radio.garden" target="_blank" rel="noopener">Radio Garden globe</a>
+    <a href="https://tunein.com" target="_blank" rel="noopener">TuneIn</a>
+  </div>
+  <p class="note">Cape Coral, Florida · 24/7 independent music · Contact: tiffaneylatorre@gmail.com · Stream: https://verafied.netlify.app/api/radio</p>
+  <h3>OTHER STATIONS</h3>
+  <ul class="stations">
+    <li><a href="https://radio.garden" target="_blank" rel="noopener">Radio Garden <small>spin the planet</small></a></li>
+    <li><a href="https://somafm.com" target="_blank" rel="noopener">SomaFM <small>San Francisco · 24/7</small></a></li>
+    <li><a href="https://www.nts.live" target="_blank" rel="noopener">NTS Radio <small>London underground</small></a></li>
+    <li><a href="https://www.kexp.org" target="_blank" rel="noopener">KEXP <small>Seattle indie</small></a></li>
+    <li><a href="https://amazingradio.com" target="_blank" rel="noopener">Amazing Radio <small>unsigned artists</small></a></li>
+    <li><a href="https://www.kcrw.com" target="_blank" rel="noopener">KCRW <small>Los Angeles</small></a></li>
+    <li><a href="https://dublab.com" target="_blank" rel="noopener">dublab <small>experimental</small></a></li>
+  </ul>
+  <p class="note">Those are other radios. VeRaFIED is yours — Cape Coral, worldwide, $5 / $2 to Luis La Torre.</p>
+</main>
+<footer class="player">
+  <span class="dot" aria-hidden="true"></span>
+  <div class="now">
+    <strong id="barTitle">Tap Join live</strong>
+    <small id="barArtist">Worldwide station</small>
+  </div>
+  <button class="pause" id="pause" type="button" hidden>Pause</button>
+</footer>
+<audio id="audio" playsinline></audio>
+<script>
+const EPOCH = Date.UTC(2026, 0, 1);
+const HOUSE = [
+  { id: "after-hours", title: "After Hours", artist: "VeRaFIED Music", src: "/audio/after-hours.wav", durationMs: 16000, genre: "Lounge", about: "Late-night lounge bed for the station — warm keys, slow pulse.", mine: false },
+  { id: "lobby-light", title: "Lobby Light", artist: "VeRaFIED Music", src: "/audio/lobby-light.wav", durationMs: 16000, genre: "Ambient", about: "Soft ambient wash between independent cuts.", mine: false },
+  { id: "signal-lost", title: "Signal Lost", artist: "VeRaFIED Music", src: "/audio/signal-lost.wav", durationMs: 16000, genre: "Electronic", about: "Short electronic sting that keeps the worldwide clock moving.", mine: false },
+];
+let tracks = HOUSE.slice();
+const audio = document.getElementById("audio");
+const join = document.getElementById("join");
+const pauseBtn = document.getElementById("pause");
+const err = document.getElementById("err");
+const fileInput = document.getElementById("file");
+const bandInput = document.getElementById("band");
+const addBtn = document.getElementById("add");
+const pinInput = document.getElementById("pin");
+let joined = false;
+let plan = 0;
+let housePin = "";
+try { housePin = localStorage.getItem("verafied.house-key") || ""; } catch (_) {}
+try { if (/[?&]paid=2/.test(location.search)) sessionStorage.setItem("verafied.paid", "2"); } catch (_) {}
+try { if (/[?&]paid=5/.test(location.search)) sessionStorage.setItem("verafied.paid", "5"); } catch (_) {}
+try { plan = Number(sessionStorage.getItem("verafied.paid") || 0) || 0; } catch (_) {}
+const PAYPAL = "tiffaneylatorre@gmail.com";
+const ZELLE = "latorre0825@gmail.com";
+const RETURN = location.origin + "/";
+
+function canAdd() {
+  return Boolean(housePin) || plan === 2 || plan === 5;
+}
+function showAdd() {
+  addBtn.hidden = false;
+  document.getElementById("songmeta").hidden = false;
+  document.getElementById("deskbox").hidden = Boolean(housePin);
+  document.getElementById("methodbox").hidden = !housePin;
+}
+
+function markPaid(amount) {
+  plan = amount;
+  try { sessionStorage.setItem("verafied.paid", String(amount)); } catch (_) {}
+  showAdd();
+  err.textContent = "Fee is for Luis La Torre. After you send it, add your song.";
+}
+
+function payUrl(amount, item) {
+  const p = new URLSearchParams({
+    cmd: "_xclick",
+    business: PAYPAL,
+    amount: amount.toFixed(2),
+    currency_code: "USD",
+    item_name: item,
+    return: RETURN + "?paid=" + amount,
+    cancel_return: RETURN,
+  });
+  return "https://www.paypal.com/cgi-bin/webscr?" + p.toString();
+}
+document.getElementById("pay5").href = payUrl(5, "VeRaFIED Music · 30 days live worldwide");
+document.getElementById("pay2").href = payUrl(2, "VeRaFIED Music · worldwide live");
+document.getElementById("pay5").addEventListener("click", () => markPaid(5));
+document.getElementById("pay2").addEventListener("click", () => markPaid(2));
+document.getElementById("zelle5").onclick = async () => {
+  markPaid(5);
+  try { await navigator.clipboard.writeText(ZELLE); } catch (_) {}
+  err.textContent = "Zelle $5 to latorre0825@gmail.com (Luis La Torre). Email copied if your phone allows.";
+};
+document.getElementById("zelle2").onclick = async () => {
+  markPaid(2);
+  try { await navigator.clipboard.writeText(ZELLE); } catch (_) {}
+  err.textContent = "Zelle $2 to latorre0825@gmail.com (Luis La Torre). Email copied if your phone allows.";
+};
+
+function paintMethods(m) {
+  const venmo = (m && m.venmo) || "";
+  const cash = (m && m.cashapp) || "";
+  const v5 = document.getElementById("venmo5");
+  const c5 = document.getElementById("cash5");
+  if (venmo) {
+    v5.hidden = false;
+    v5.href = "https://venmo.com/" + encodeURIComponent(venmo) + "?txn=pay&amount=5&note=" + encodeURIComponent("VeRaFIED Music");
+    v5.textContent = "Venmo $5 · @" + venmo;
+    v5.onclick = () => markPaid(5);
+  }
+  if (cash) {
+    c5.hidden = false;
+    c5.href = "https://cash.app/$" + encodeURIComponent(cash) + "/5.00";
+    c5.textContent = "Cash App $5 · $" + cash;
+    c5.onclick = () => markPaid(5);
+  }
+  document.getElementById("venmo").value = venmo;
+  document.getElementById("cashapp").value = cash ? "$" + cash : "";
+}
+fetch("/api/methods").then((r) => r.json()).then((j) => { if (j && j.methods) paintMethods(j.methods); }).catch(() => {});
+
+document.getElementById("desk").onclick = async () => {
+  const pin = pinInput.value.trim();
+  err.textContent = "";
+  try {
+    const r = await fetch("/api/desk", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ pin }),
+    });
+    const j = await r.json();
+    if (!j.ok) {
+      err.textContent = "That key does not open the desk.";
+      return;
+    }
+    housePin = pin;
+    try { localStorage.setItem("verafied.house-key", pin); } catch (_) {}
+    err.textContent = "Station desk open. You can add songs with no fee. Save Venmo and Cash App below.";
+    showAdd();
+  } catch (_) {
+    err.textContent = "Could not open the desk. Try again.";
+  }
+};
+document.getElementById("savemethods").onclick = async () => {
+  err.textContent = "";
+  try {
+    const r = await fetch("/api/methods", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        pin: housePin,
+        venmo: document.getElementById("venmo").value,
+        cashapp: document.getElementById("cashapp").value,
+      }),
+    });
+    const j = await r.json();
+    if (!j.ok) {
+      err.textContent = j.error || "Could not save.";
+      return;
+    }
+    paintMethods(j.methods);
+    err.textContent = "Saved. Bands can now pay you on Venmo and Cash App too.";
+  } catch (_) {
+    err.textContent = "Could not save payment methods.";
+  }
+};
+showAdd();
+
+function dbp() {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open("verafied", 1);
+    r.onupgradeneeded = () => r.result.createObjectStore("songs", { keyPath: "id" });
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+  });
+}
+async function saveSong(rec) {
+  const db = await dbp();
+  await new Promise((res, rej) => {
+    const tx = db.transaction("songs", "readwrite");
+    tx.objectStore("songs").put(rec);
+    tx.oncomplete = res;
+    tx.onerror = () => rej(tx.error);
+  });
+}
+async function loadSongs() {
+  try {
+    const db = await dbp();
+    const rows = await new Promise((res, rej) => {
+      const tx = db.transaction("songs", "readonly");
+      const q = tx.objectStore("songs").getAll();
+      q.onsuccess = () => res(q.result || []);
+      q.onerror = () => rej(q.error);
+    });
+    for (const row of rows) {
+      const src = URL.createObjectURL(row.blob);
+      tracks.push({ id: row.id, title: row.title, artist: row.artist, src, durationMs: row.durationMs || 30000, genre: row.genre || "Independent", about: row.about || "", mine: true });
+    }
+  } catch (_) {}
+}
+
+function stationNow(now = Date.now()) {
+  const total = tracks.reduce((s, t) => s + Math.max(1000, t.durationMs), 0);
+  let elapsed = (now - EPOCH) % total;
+  if (elapsed < 0) elapsed += total;
+  let acc = 0;
+  for (const track of tracks) {
+    const d = Math.max(1000, track.durationMs);
+    if (elapsed < acc + d) return { track, positionMs: elapsed - acc };
+    acc += d;
+  }
+  return { track: tracks[0], positionMs: 0 };
+}
+function clock(ms) {
+  const s = Math.max(1, Math.round(ms / 1000));
+  return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+}
+function paint(track) {
+  document.getElementById("title").textContent = track.title;
+  document.getElementById("artist").textContent = track.artist;
+  document.getElementById("genrechip").textContent = track.genre || "Independent";
+  document.getElementById("about").textContent = track.about || "Independent original on VeRaFIED, Cape Coral.";
+  document.getElementById("barTitle").textContent = track.title;
+  document.getElementById("barArtist").textContent = (track.genre || "Independent") + " · " + track.artist + (track.mine ? " · your song" : " · worldwide");
+  document.querySelectorAll(".list button").forEach((b) => b.classList.toggle("on", b.dataset.id === track.id));
+}
+function renderList() {
+  document.getElementById("catalog").innerHTML = tracks.map((t) =>
+    `<li><button type="button" data-id="${t.id}"><span>${t.title}<br><small>${t.artist} · ${t.genre || "Independent"}${t.mine ? " · yours" : ""}</small></span><small>${clock(t.durationMs)}</small></button></li>`
+  ).join("");
+  const types = [];
+  for (const t of tracks) {
+    const g = t.genre || "Independent";
+    if (!types.includes(g)) types.push(g);
+  }
+  document.getElementById("genreslist").textContent = types.join(" · ");
+}
+function playAt(track, positionMs) {
+  err.textContent = "";
+  audio.src = track.src;
+  const start = Math.min(Math.max(0, positionMs / 1000), Math.max(0, track.durationMs / 1000 - 0.2));
+  const go = () => { try { audio.currentTime = start; } catch (_) {} audio.play(); };
+  if (audio.readyState >= 1) go();
+  else audio.addEventListener("loadedmetadata", go, { once: true });
+  paint(track);
+  return audio.play();
+}
+function joinLive() {
+  joined = true;
+  join.textContent = "On air";
+  pauseBtn.hidden = false;
+  pauseBtn.textContent = "Pause";
+  const fallback = stationNow();
+  fetch("/api/now", { cache: "no-store" })
+    .then((r) => r.json())
+    .then((j) => {
+      const house = j && j.onAir && tracks.find((t) => t.id === j.onAir.id && !t.mine);
+      const now = house
+        ? { track: house, positionMs: Number(j.positionMs) || 0 }
+        : fallback;
+      return playAt(now.track, now.positionMs);
+    })
+    .catch(() => playAt(fallback.track, fallback.positionMs))
+    .catch(() => {
+      err.textContent = "Tap Join live again — the phone needs a tap to play.";
+      joined = false;
+      join.textContent = "Join live";
+    });
+}
+function readDuration(file) {
+  return new Promise((resolve) => {
+    const a = document.createElement("audio");
+    a.preload = "metadata";
+    a.src = URL.createObjectURL(file);
+    a.onloadedmetadata = () => {
+      const ms = isFinite(a.duration) ? Math.round(a.duration * 1000) : 30000;
+      URL.revokeObjectURL(a.src);
+      resolve(ms);
+    };
+    a.onerror = () => resolve(30000);
+  });
+}
+
+join.onclick = joinLive;
+pauseBtn.onclick = () => {
+  if (audio.paused) { if (!joined) { joinLive(); return; } audio.play(); pauseBtn.textContent = "Pause"; }
+  else { audio.pause(); pauseBtn.textContent = "Play"; }
+};
+document.getElementById("add").onclick = async () => {
+  if (canAdd()) {
+    fileInput.click();
+    return;
+  }
+  const typed = (pinInput.value || "").trim();
+  if (typed) {
+    document.getElementById("desk").click();
+    setTimeout(() => { if (canAdd()) fileInput.click(); }, 400);
+    return;
+  }
+  pinInput.focus();
+  err.textContent = "Luis & Tiffaney: type the family key below and tap Open station desk — then Add my song. Bands: pay $5 or $2 first.";
+};
+fileInput.onchange = async () => {
+  const file = fileInput.files && fileInput.files[0];
+  fileInput.value = "";
+  if (!file) return;
+  if (!canAdd()) {
+    err.textContent = "Bands pay $5 or $2 first. The family key is only for Luis and Tiffaney.";
+    return;
+  }
+  if (!/^audio\//.test(file.type) && !/\.(mp3|m4a|wav|aac|caf|ogg)$/i.test(file.name)) {
+    err.textContent = "Pick an audio file (mp3, m4a, wav).";
+    return;
+  }
+  if (file.size > 20 * 1024 * 1024) {
+    err.textContent = "Keep the file under 20 MB.";
+    return;
+  }
+  err.textContent = "Adding your song…";
+  const durationMs = await readDuration(file);
+  const title = (document.getElementById("songtitle").value || "").trim() || file.name.replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ").trim() || "My song";
+  const artist = (bandInput.value || "").trim() || "You";
+  const genre = document.getElementById("genrepick").value || "Independent";
+  const about = (document.getElementById("songabout").value || "").trim() || (genre + " original on VeRaFIED, Cape Coral.");
+  const id = "mine-" + Date.now();
+  const rec = { id, title, artist, genre, about, blob: file, durationMs };
+  try { await saveSong(rec); } catch (_) {}
+  const src = URL.createObjectURL(file);
+  const track = { id, title, artist, genre, about, src, durationMs, mine: true };
+  tracks.push(track);
+  renderList();
+  joined = true;
+  join.textContent = "On air";
+  pauseBtn.hidden = false;
+  pauseBtn.textContent = "Pause";
+  try {
+    const fd = new FormData();
+    fd.append("file", file);
+    fd.append("title", title);
+    fd.append("artist", artist);
+    fd.append("genre", genre);
+    fd.append("about", about);
+    fd.append("plan", housePin ? "" : String(plan));
+    fd.append("pin", housePin);
+    fd.append("durationMs", String(durationMs));
+    const res = await fetch("/api/launch", { method: "POST", body: fd });
+    const j = await res.json();
+    if (j && j.ok) {
+      const days = j.days || (plan === 5 ? 30 : 7);
+      err.textContent = "Live worldwide for " + days + " days. Anyone on this link can hear it.";
+      if (j.track && j.track.src) {
+        track.src = j.track.src;
+        track.id = j.track.id;
+        track.mine = false;
+        renderList();
+      }
+    } else {
+      err.textContent = "Saved on this phone. Pay $5 or $2 so it can go worldwide.";
+    }
+  } catch (_) {
+    err.textContent = "Saved on this phone. Pay $5 or $2 so it can go worldwide.";
+  }
+  playAt(track, 0).catch(() => { err.textContent = "Tap your song in the list to play it."; });
+};
+document.getElementById("catalog").addEventListener("click", (e) => {
+  const btn = e.target.closest("button");
+  if (!btn) return;
+  const track = tracks.find((t) => t.id === btn.dataset.id);
+  if (!track) return;
+  joined = true;
+  join.textContent = "On air";
+  pauseBtn.hidden = false;
+  pauseBtn.textContent = "Pause";
+  playAt(track, 0).catch(() => { err.textContent = "Tap the track again to start audio."; });
+});
+audio.addEventListener("ended", () => {
+  if (!joined) return;
+  const now = stationNow();
+  playAt(now.track, now.positionMs).catch(() => {});
+});
+
+loadSongs().then(async () => {
+  try {
+    const r = await fetch("/api/now", { cache: "no-store" });
+    const j = await r.json();
+    if (j && Array.isArray(j.tracks)) {
+      for (const t of j.tracks) {
+        if (HOUSE.some((h) => h.id === t.id)) continue;
+        if (tracks.some((x) => x.id === t.id)) continue;
+        tracks.push({
+          id: t.id,
+          title: t.title,
+          artist: t.artist,
+          src: t.src,
+          durationMs: t.durationMs || 30000,
+          genre: t.genre || "Independent",
+          about: t.about || "",
+          mine: false,
+        });
+      }
+    }
+  } catch (_) {}
+  renderList();
+  paint(stationNow().track);
+});
+renderList();
+paint(stationNow().track);
+setInterval(() => { if (!joined) paint(stationNow().track); }, 1000);
+
+const SHARE = location.origin;
+const SHARE_TEXT = "VeRaFIED — worldwide music station. Join live, same song same second. Listen free. Bands go live $5 or $2. " + SHARE;
+document.getElementById("sharex").href = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(SHARE_TEXT);
+document.getElementById("sharewa").href = "https://wa.me/?text=" + encodeURIComponent(SHARE_TEXT);
+document.getElementById("sharesms").href = "sms:?&body=" + encodeURIComponent(SHARE_TEXT);
+document.getElementById("copy").onclick = async () => {
+  try {
+    await navigator.clipboard.writeText(SHARE);
+    err.textContent = "Link copied. Send it to anyone — they tap Join live.";
+  } catch (_) {
+    err.textContent = SHARE;
+  }
+};
+</script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="14b8bf00-5d17-4572-aa44-db121cab6cf8" data-app-host="app.netlify.com"></script>

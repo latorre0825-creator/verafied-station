@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://verafied.netlify.app/sitemap.xml
