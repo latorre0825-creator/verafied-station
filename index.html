@@ -181,9 +181,9 @@ input[type=file]{display:none}
 <script>
 const EPOCH = Date.UTC(2026, 0, 1);
 const HOUSE = [
-  { id: "after-hours", title: "After Hours", artist: "VeRaFIED Music", src: "audio/after-hours.mp3", durationMs: 16000, genre: "Lounge", about: "Late-night lounge bed for the station — warm keys, slow pulse.", mine: false },
-  { id: "lobby-light", title: "Lobby Light", artist: "VeRaFIED Music", src: "audio/lobby-light.mp3", durationMs: 16000, genre: "Ambient", about: "Soft ambient wash between independent cuts.", mine: false },
-  { id: "signal-lost", title: "Signal Lost", artist: "VeRaFIED Music", src: "audio/signal-lost.mp3", durationMs: 16000, genre: "Electronic", about: "Short electronic sting that keeps the worldwide clock moving.", mine: false },
+  { id: "after-hours", title: "After Hours", artist: "VeRaFIED Music", src: "https://cdn.jsdelivr.net/gh/latorre0825-creator/verafied-station@main/audio/after-hours.mp3", durationMs: 16000, genre: "Lounge", about: "Late-night lounge bed for the station.", mine: false },
+  { id: "lobby-light", title: "Lobby Light", artist: "VeRaFIED Music", src: "https://cdn.jsdelivr.net/gh/latorre0825-creator/verafied-station@main/audio/lobby-light.mp3", durationMs: 16000, genre: "Ambient", about: "Soft ambient wash between independent cuts.", mine: false },
+  { id: "signal-lost", title: "Signal Lost", artist: "VeRaFIED Music", src: "https://cdn.jsdelivr.net/gh/latorre0825-creator/verafied-station@main/audio/signal-lost.mp3", durationMs: 16000, genre: "Electronic", about: "Short electronic sting that keeps the worldwide clock moving.", mine: false },
 ];
 let tracks = HOUSE.slice();
 const audio = document.getElementById("audio");
